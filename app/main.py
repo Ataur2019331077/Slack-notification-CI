@@ -15,13 +15,7 @@ def check():
 def new_endpoint():
     return {"message": "This is a new endpoint!"}
 
-
-
-@app.get("/branch-created")
-def branch_created():
-    return {"message": "This is from new branch"}
-
-@app.get("/check-branch")
-def check_branch():
-    return {"message": "This is for checking"}
+@app.get("/adding-subbranch")
+def adding_subbranch():
+    return {"message": "This is a new subbranch!"}
 

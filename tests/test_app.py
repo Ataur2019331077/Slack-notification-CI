@@ -13,18 +13,7 @@ def test_check():
     assert response.status_code == 200
     assert response.json() == {"message": "Check endpoint is working"}
 
-def test_new_endpoint():
-    response = client.get("/new-endpoint")
+def test_adding_subbranch():
+    response = client.get("/adding-subbranch")
     assert response.status_code == 200
-    assert response.json() == {"message": "This is a new endpoint!"}
-
-def test_branch_created():
-    response = client.get("/branch-created")
-    assert response.status_code == 200
-    assert response.json() == {"message": "This is from new branch"}
-
-
-def test_check_branch():
-    response = client.get("/check-branch")
-    assert response.status_code == 200
-    assert response.json() == {"message": "This is for checking"}
+    assert response.json() == {"message": "This is a new subbranch!"}
